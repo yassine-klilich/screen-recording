@@ -1,51 +1,49 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Screen Recorder</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
 
-<head>
-	<meta charset="UTF-8">
-	<title>Screen Recorder</title>
-	<link rel="stylesheet" href="styles.css">
-</head>
+  <body>
+    <div class="container">
+      <h1>Screen Recorder</h1>
 
-<body>
-	<div class="container">
-		<h1>Screen Recorder</h1>
+      <div class="preview-container">
+        <video id="preview" autoplay muted></video>
+      </div>
 
-		<div class="preview-container">
-			<video id="preview" autoplay muted></video>
-		</div>
+      <div class="source-selection">
+        <h3>Select What to Record</h3>
 
-		<div class="source-selection">
-			<h3>Select What to Record</h3>
+        <div class="selection-tabs">
+          <button class="tab-btn active" data-tab="monitors">Monitors</button>
+          <button class="tab-btn" data-tab="windows">Windows</button>
+        </div>
 
-			<div class="selection-tabs">
-				<button class="tab-btn active" data-tab="monitors">Monitors</button>
-				<button class="tab-btn" data-tab="windows">Windows</button>
-			</div>
+        <div class="tab-content" id="monitors-tab">
+          <div class="select-wrapper">
+            <select id="monitorsDropdown" class="dropdown">
+              <option value="" disabled selected>Select a monitor</option>
+            </select>
+          </div>
+        </div>
 
-			<div class="tab-content" id="monitors-tab">
-				<div class="select-wrapper">
-					<select id="monitorsDropdown" class="dropdown">
-						<option value="" disabled selected>Select a monitor</option>
-					</select>
-				</div>
-			</div>
+        <div class="tab-content hidden" id="windows-tab">
+          <div id="source-thumbnails" class="source-thumbnails"></div>
+        </div>
+      </div>
 
-			<div class="tab-content hidden" id="windows-tab">
-				<div id="source-thumbnails" class="source-thumbnails"></div>
-			</div>
-		</div>
+      <div class="controls">
+        <button id="startBtn" class="btn" disabled>Start Recording</button>
+        <button id="stopBtn" class="btn" disabled>Stop Recording</button>
+        <button id="refreshSourcesBtn" class="btn">Refresh Sources</button>
+      </div>
 
-		<div class="controls">
-			<button id="startBtn" class="btn" disabled>Start Recording</button>
-			<button id="stopBtn" class="btn" disabled>Stop Recording</button>
-			<button id="refreshSourcesBtn" class="btn">Refresh Sources</button>
-		</div>
+      <div id="status" class="status"></div>
+    </div>
 
-		<div id="status" class="status"></div>
-	</div>
-
-	<script src="renderer.js"></script>
-</body>
-
+    <script src="renderer.js"></script>
+  </body>
 </html>
