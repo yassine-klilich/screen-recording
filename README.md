@@ -1,3 +1,5 @@
+![Screenshot 2025-02-27 233614](https://github.com/user-attachments/assets/680ea676-f512-490f-baf0-85425642dfa6)
+
 ## How to Use This Screen Recorder App
 
 1. **Install Dependencies**:
